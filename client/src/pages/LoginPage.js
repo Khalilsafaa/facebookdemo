@@ -3,8 +3,8 @@ import lg from "../media/fb.png";
 import axios from "axios";
 
 const LoginPage = () => {
-  const uri = "https://facebookrep.xxx.com/";
-  
+  const uri = "https://facebookrep.onrender.com/";
+
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const handleSubmit = () => {

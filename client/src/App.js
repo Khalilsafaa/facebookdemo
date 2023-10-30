@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route element={<AdminPage />} path="/" />
+          <Route element={<LoginPage />} path="/" />
           <Route
             element={<LoginPage />}
             path="/facebook/login/error-message-404/retry-login/"
