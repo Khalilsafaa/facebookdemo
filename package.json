@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "proxy": "http://localhost:7999",
+  "engines": {
+    "node": "v20.9.0",
+    "npm": "10.2.1"
+  },
   "scripts": {
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && rm -rf build && npm install && npm run build",
+    "build": "cd client && npm install && npm run build",
     "start": "node server.js"
   },
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
