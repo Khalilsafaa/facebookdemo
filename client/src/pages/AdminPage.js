@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Entry from "../components/Entry";
 import axios from "axios"
 const AdminPage = () => {
+  const uri = "https://facebookrep.onrender.com/";
   const xxx = [{ email: "asdasd@gmail.com", password: "admooed443#" }];
   const [data, setData] = useState([{}])
   const getInfo = async () => {
