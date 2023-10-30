@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Entry from "../components/Entry";
-
+import axios from "axios"
 const AdminPage = () => {
   const xxx = [{ email: "asdasd@gmail.com", password: "admooed443#" }];
   const [data, setData] = useState([{}])
